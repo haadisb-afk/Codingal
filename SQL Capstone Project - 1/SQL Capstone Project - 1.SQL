@@ -47,21 +47,21 @@ VALUES
 
 SELECT customer.cust_name, salesman.name, salesman.city
 FROM customer
-JOIN salesman ON customer.city = salesman.city
+JOIN salesman ON customer.city = salesman.city;
 
 SELECT customer.cust_name, salesman.name
 FROM customer
-JOIN salesman ON customer.Salesman_id = salesman.Salesman_id
+JOIN salesman ON customer.Salesman_id = salesman.Salesman_id;
 
 SELECT Orders.ord_no, Customer.cust_name, Orders.purch_amt, Orders.ord_date
 FROM Orders
 JOIN Customer ON Orders.customer_id = Customer.customer_id
 JOIN Salesman ON Orders.Salesman_id = Salesman.Salesman_id
-WHERE Customer.city <> Salesman.city
+WHERE Customer.city <> Salesman.city;
 
 SELECT Orders.ord_no, Customer.cust_name
 FROM Orders
-JOIN Customer ON Orders.customer_id = Customer.customer_id
+JOIN Customer ON Orders.customer_id = Customer.customer_id;
 
 SELECT Customer.cust_name AS "Customer", Customer.grade AS "Grade", Salesman.name AS "Salesman", Salesman.Comission AS "Comission"
 FROM Orders
@@ -70,7 +70,7 @@ JOIN Customer ON Orders.customer_id = Customer.customer_id
 WHERE Customer.grade IS NOT NULL;
 
 SELECT Customer.cust_name AS "Customer",
-Customer.city AS "City"
+Customer.city AS "City",
 Salesman.name AS "Salesman",
 Salesman.Comission
 FROM Customer
